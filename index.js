@@ -18,10 +18,9 @@ const app = Vue.createApp({
                     window.location="/admin.html"
                 })
                 .catch((err) => {
-                    console.dir(err)
                     alert('你輸入的資訊有誤')
                     this.data.username=""
-                    this.date.password=""
+                    this.data.password=""
                 })
         },
         checkForm(){
