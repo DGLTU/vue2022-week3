@@ -15,7 +15,7 @@ const app = Vue.createApp({
                 .then((res) => {
                     const {token,expired} = res.data
                     document.cookie = `token=${token}; expires=${new Date(expired)}; path=/`;
-                    window.location="/admin.html"
+                    window.location="admin.html"
                 })
                 .catch((err) => {
                     alert('你輸入的資訊有誤')

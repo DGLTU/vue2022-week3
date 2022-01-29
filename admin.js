@@ -36,7 +36,7 @@ createApp({
                 })
                 .catch((err) => {
                     alert('請重新登入')
-                    window.location = "/index.html"
+                    window.location = "index.html"
                 })
         },
         openModal(state, data) {
