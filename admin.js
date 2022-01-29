@@ -38,9 +38,8 @@ const app = Vue.createApp({
                     this.getProduct()
                 })
                 .catch((err) => {
-                    console.dir(err);
                     alert('請重新登入')
-                    window.location = "https://dgltu.github.io/vue2022-week3/index.html"
+                    window.location = "/index.html"
                 })
         },
         getProduct() {
