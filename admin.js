@@ -27,16 +27,12 @@ const app = Vue.createApp({
         }
     },
     created() {
-        this.checkSignin()
-    },
-    mounted() {
         this.token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*\=\s*([^;]*).*$)|^.*$/, "$1")
         axios.defaults.headers.common['Authorization'] = this.token
+        this.checkSignin()
     },
     methods: {
         checkSignin() {
-            const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*\=\s*([^;]*).*$)|^.*$/, "$1")
-            axios.defaults.headers.common['Authorization'] = token
             axios.post('https://vue3-course-api.hexschool.io/v2/api/user/check')
                 .then((res) => {
                     this.getProduct()
